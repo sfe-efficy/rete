@@ -1,9 +1,17 @@
 {
-    "extends": "rete-cli/tsconfig.json",
+    "extends": "efficy-rete-cli/tsconfig.json",
     "compilerOptions": {
-        "target": "es5",
+        "target": "esnext",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "outDir": "./dist/",
+        "esModuleInterop": true,
+        "strict": true,
         "downlevelIteration": true,
-	"isolatedModules": false
+	    "isolatedModules": false,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "lib": ["esnext", "dom", "dom.iterable"]
     },
-    "include": ["src"]
+    "include": ["./src/**/*.ts"]
 }

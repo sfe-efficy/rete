@@ -1,5 +1,5 @@
 import { Comp1 } from './data/components';
-import { NodeEditor } from '../src';
+import { NodeEditor } from '../src/editor';
 import { Plugin } from '../src/core/plugin';
 import assert from 'assert';
 

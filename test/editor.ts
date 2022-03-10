@@ -1,8 +1,13 @@
 import assert from 'assert';
-import { Component, Node, Input, NodeEditor, Output } from '../src';
+import { NodeEditor } from '../src/editor';
+import { Component } from '../src/component';
+import { Input } from '../src/input';
+import { Node } from '../src/node';
+import { Output } from '../src/output';
 import { renderMock } from './utils/render-mock';
 import { Comp1, Comp2 } from './data/components';
 import addNumbersData from './data/add-numbers';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 require('jsdom-global')()
 
 describe('Editor', () => {
@@ -76,7 +81,7 @@ describe('Editor', () => {
             editor.connect(node1.outputs.get('num') as Output, node2.inputs.get('num1') as Input);
             assert.strictEqual((node1.outputs.get('num') as Output).connections.length, 1, 'one connection');
             
-            var connection = (node1.outputs.get('num') as Output).connections[0];
+            let connection = (node1.outputs.get('num') as Output).connections[0];
 
             assert.doesNotThrow(() => editor.removeConnection(connection), Error, 'remove connection');
             assert.strictEqual((node1.outputs.get('num') as Output).connections.length, 0, 'no connections');

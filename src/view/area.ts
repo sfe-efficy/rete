@@ -45,7 +45,7 @@ export class Area extends Emitter<EventsTypes> {
         this.el.style.transform = `translate(${t.x}px, ${t.y}px) scale(${t.k})`;
     }
 
-    pointermove(e: PointerEvent) {
+    pointermove(e: MouseEvent) {
         const { clientX, clientY } = e;
         const rect = this.el.getBoundingClientRect();
         const x = clientX - rect.left;

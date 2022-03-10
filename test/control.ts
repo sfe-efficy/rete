@@ -1,4 +1,7 @@
-import { Control, Input, Node, Socket } from '../src';
+import { Control } from '../src/control';
+import { Input } from '../src/input';
+import { Node } from '../src/node';
+import { Socket } from '../src/socket';
 import assert from 'assert';
 
 class MyControl extends Control {

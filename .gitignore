@@ -8,3 +8,4 @@ coverage
 npm-debug.log
 build
 types
+src/*.js

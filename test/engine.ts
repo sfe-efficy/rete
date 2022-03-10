@@ -5,8 +5,8 @@ import assert from 'assert';
 import recursiveData from './data/recursive'
 
 describe('Engine', () => {
-    var id = 'test@0.0.1';
-    var data = { id, nodes: {} };
+    let id = 'test@0.0.1';
+    let data = { id, nodes: {} };
 
     function createValidEngine() {
         let eng = new Engine(id);
@@ -78,7 +78,7 @@ describe('Engine', () => {
 
         it('process start node', async () => {
             const correctId = Object.keys(addNumbersData.nodes)[0];
-            const wrongId = Number.POSITIVE_INFINITY;
+            //const wrongId = Number.POSITIVE_INFINITY;
 
             assert.strictEqual(await engine.process(addNumbersData as any, correctId), 'success')
             // assert.strictEqual(await engine.process(addNumbersData as any, wrongId), 'error')

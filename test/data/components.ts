@@ -1,4 +1,8 @@
-import { Component, Input, Node, Output, Socket } from '../../src';
+import { Component } from '../../src/component';
+import { Input } from '../../src/input';
+import { Node } from '../../src/node';
+import { Output } from '../../src/output';
+import { Socket } from '../../src/socket';
 
 const socketNum = new Socket('Number');
 

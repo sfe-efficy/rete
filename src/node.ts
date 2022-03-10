@@ -23,12 +23,17 @@ export class Node {
     }
 
     _add<T extends any>(list: Map<string, T>, item: T, prop: string) {
+        // @ts-ignore
         if (list.has(item.key))
+            // @ts-ignore
             throw new Error(`Item with key '${item.key}' already been added to the node`);
+        // @ts-ignore
         if (item[prop] !== null)
             throw new Error('Item has already been added to some node');
-        
+
+        // @ts-ignore
         item[prop] = this;
+        // @ts-ignore
         list.set(item.key, item);
     }
 
@@ -93,6 +98,7 @@ export class Node {
     toJSON(): NodeData {
         const reduceIO = <T extends any>(list: Map<string, Input | Output>) => {
             return Array.from(list).reduce<T>((obj, [key, io]) => {
+                // @ts-ignore
                 obj[key] = io.toJSON();
                 return obj;
             }, {} as any)
