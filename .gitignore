@@ -9,3 +9,4 @@ npm-debug.log
 build
 types
 src/*.js
+src/*/*.js
