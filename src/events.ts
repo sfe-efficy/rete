@@ -18,6 +18,7 @@ export class EditorEvents extends Events {
             nodecreated: [],
             noderemove: [],
             noderemoved: [],
+            nodeCloned: [],
             connectioncreate: [],
             connectioncreated: [],
             connectionremove: [],
@@ -59,6 +60,7 @@ export interface EventsTypes extends DefaultEventsTypes {
     nodecreated: Node;
     noderemove: Node;
     noderemoved: Node;
+    nodeCloned: Node;
     connectioncreate: { input: Input; output: Output };
     connectioncreated: Connection;
     connectionremove: Connection;
